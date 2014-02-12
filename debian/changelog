@@ -1,3 +1,55 @@
+libsm (2:1.2.1-2) unstable; urgency=low
+
+  * Add missing ${misc:Depends} to libsm-doc.
+  * Add missing Replaces/Breaks on libsm-dev to the doc package.  Thanks,
+    Sven Joachim!
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 09 Apr 2012 20:18:02 +0200
+
+libsm (2:1.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop 0001-sm.pc-don-t-export-a-dependency-on-ice.patch, applied upstream.
+  * Don't require (fake)root for debian/rules clean.
+  * Split the docs to a separate libsm-doc package
+    - mark libsm-dev Multi-Arch: same, and libsm-doc Multi-Arch: foreign
+    - don't build the docs in build-arch
+  * Bump build-deps on xutils-dev, xmlto and xorg-sgml-doctools.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 09 Apr 2012 17:55:48 +0200
+
+libsm (2:1.2.0-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Steve Langasek ]
+  * Build for multiarch.
+
+  [ Julien Cristau ]
+  * Remove David Nusinow and Brice Goglin from Uploaders.
+  * Bump Standards-Version to 3.9.2.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 11 Jun 2011 14:49:47 +0200
+
+libsm (2:1.2.0-1) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+
+  [ Cyril Brulebois ]
+  * New upstream release.
+  * Bump xutils-dev build-dep for new macros.
+  * Add xmlto, xorg-sgml-doctools, and w3m build-dep for the doc.
+  * Pass --with-xmlto and --without-fop, we want html and txt only.
+  * Kill *.xml in the doc directory, no point in shipping them.
+  * Ship *.html, *.css, and *.txt from the doc directory.
+  * Switch from --list-missing to --fail-missing for additional safety.
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 08 Nov 2010 01:42:36 +0100
+
 libsm (2:1.1.1-1) unstable; urgency=low
 
   * New upstream release.
