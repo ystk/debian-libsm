@@ -2,9 +2,9 @@ Source: libsm
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends:
- debhelper (>= 8.1.3),
+ debhelper (>= 9),
+ dh-autoreconf,
  pkg-config,
  x11proto-core-dev (>= 6.8.99.15+cvs.20050722),
  xtrans-dev,
